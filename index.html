@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">John Doe</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                    <li><a href="#education" class="hover:text-blue-500">Education</a></li>
+                    <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+                    <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero flex flex-col items-center py-20">
+            <div class="profile flex items-center">
+                <img src="C:\Users\vivek\Documents\profile.jpg" alt="John Doe" class="rounded-full w-40 h-40 mr-8">
+                <div class="text">
+                    <h2 class="text-xl font-semibold">Hello, I'm <br></h2>
+                    <h3>John Doe</h3>
+                    <p class="text-gray-600">Frontend Developer</p>
+                    <div class="buttons mt-4 flex space-x-4">
+                        <a href="#" class="btn download-cv">Download CV</a>
+                        <a href="#contact" class="btn contact-info">Contact Info</a>
+                    </div>
+                    <div class="socials flex justify-center mt-4">
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="relative text-gray-600 hover:text-blue-600 mx-2 group">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn" class="w-8 h-8">
+                            <span class="tooltip absolute left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/yourprofile" target="_blank" class="relative text-gray-600 hover:text-black mx-2 group">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" alt="GitHub" class="w-8 h-8">
+                            <span class="tooltip absolute left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="p-4 bg-white rounded shadow mb-4">
+            <h2 class="text-2xl font-bold text-center">Get To Know More</h2>
+            <h3 class="text-xl font-semibold text-center mt-2">About Me</h3>
+            <div class="about-content flex justify-center items-start mt-6">
+                <img src="C:\Users\vivek\Pictures\about1.jpg" alt="John Doe" class="rounded-full w-40 h-40 mr-8">
+                <div class="about-details flex flex-col">
+                    <div class="highlighted-content">
+                        <p class="text-gray-600">
+                            As a <strong>Full Stack Developer</strong>, I have experience in both frontend and backend technologies, allowing me to build comprehensive web applications. Additionally, my background as a <strong>Data Scientist</strong> enables me to analyze data effectively and derive insights that drive decision-making.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="education" class="p-4 bg-white rounded shadow mb-4">
+            <h2 class="text-2xl font-bold text-center">Education</h2>
+            <div class="education-content flex justify-between mt-6">
+                <div class="education-box bg-gray-100 p-4 rounded shadow-md w-1/2 mr-2">
+                    <h3 class="font-bold">Bachelor of Technology</h3>
+                    <p>Swarnandhra College of Engineering & Technology</p>
+                    <p>Computer Science Engineering</p>
+                    <p>Narsapur</p>
+                </div>
+                <div class="education-box bg-gray-100 p-4 rounded shadow-md w-1/2 ml-2">
+                    <h3 class="font-bold">Intermediate</h3>
+                    <p>Aditya Junior College</p>
+                    <p>MPC</p>
+                    <p>Narsapur</p>
+                </div>
+            </div>
+            <div class="education-content flex justify-between mt-4">
+                <div class="education-box bg-gray-100 p-4 rounded shadow-md w-1/2 mr-2">
+                    <h3 class="font-bold">SSC</h3>
+                    <p>Aditya School</p>
+                    <p>Narsapur</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills-section">
+            <h2 class="section-title"><i class="fas fa-cogs"></i> Skills</h2>
+            <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="skill-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 class="skill-heading"><i class="fas fa-code"></i> Frontend</h3>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> HTML5</li>
+                                <li><i class="fas fa-check-circle"></i> CSS3</li>
+                                <li><i class="fas fa-check-circle"></i> JavaScript</li>
+                                <li><i class="fas fa-check-circle"></i> React</li>
+                                <li><i class="fas fa-check-circle"></i> Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 class="skill-heading"><i class="fas fa-server"></i> Backend</h3>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Node.js</li>
+                                <li><i class="fas fa-check-circle"></i> Django</li>
+                                <li><i class="fas fa-check-circle"></i> Rest APIs</li>
+                                <li><i class="fas fa-check-circle"></i> PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 class="skill-heading"><i class="fas fa-code-branch"></i> Programming Languages</h3>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Java</li>
+                                <li><i class="fas fa-check-circle"></i> Python</li>
+                                <li><i class="fas fa-check-circle"></i> C</li>
+                                <li><i class="fas fa-check-circle"></i> SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 class="skill-heading"><i class="fas fa-tools"></i> Tools & Techniques</h3>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Git</li>
+                                <li><i class="fas fa-check-circle"></i> Github</li>
+                                <li><i class="fas fa-check-circle"></i> VS Code</li>
+                                <li><i class="fas fa-check-circle"></i> Jupyter</li>
+                                <li><i class="fas fa-check-circle"></i> Tensor Flow</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3 class="skill-heading"><i class="fas fa-user-friends"></i> Soft Skills</h3>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Teamwork</li>
+                                <li><i class="fas fa-check-circle"></i> Communication</li>
+                                <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                                <li><i class="fas fa-check-circle"></i> Project Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    
+      
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Browse My Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.DR_oUgY_5d0LlUmCn2O9lAHaD4&pid=Api&P=0&h=180" alt="Stock Market Prediction" class="project-image">
+                    <h3 class="project-title">Stock Market Prediction</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/stockmarket-prediction" class="project-link">GitHub</a>
+                        <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+               
+                <div class="project-card">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.ypF0IiE-KLckwSzgVpKrjgHaE7&pid=Api&P=0&h=180" alt="Tic Tac Toe" class="project-image">
+                    <h3 class="project-title">Tic Tac Toe</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/tictactoe" class="project-link">GitHub</a>
+                        <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.APiJq2pa3eaBcm3i7onj9QHaFj&pid=Api&P=0&h=180" alt="Tic Tac Toe" class="project-image">
+                <h3 class="project-title">Weather App</h3>
+                <div class="project-links">
+                    <a href="https://tse3.mm.bing.net/th?id=OIP.APiJq2pa3eaBcm3i7onj9QHaFj&pid=Api&P=0&h=180" class="project-link">GitHub</a>
+                    <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
+                </div>
+            </div>
+
+                <div class="project-card">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.QgJJ3E-wS0eaNAZoNmNqfQHaEO&pid=Api&P=0&h=180 alt="Portfolio Clone" class="project-image">
+                    <h3 class="project-title">Responsive Page</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/portfolio-clone" class="project-link">GitHub</a>
+                        <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="p-4 bg-white rounded shadow mb-4">
+            <h2 class="text-2xl font-bold">Experience</h2>
+            <p>Details about your work experience.</p>
+        </section>
+
+        <section id="contact" class="p-4 bg-white rounded shadow mb-4">
+            <h2 class="text-2xl font-bold">Contact</h2>
+            <p>Contact information.</p>
+        </section>
+       
+    </main>
+    <footer class="text-center p-4 bg-white">
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
