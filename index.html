@@ -23,6 +23,26 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        // Toggle mobile menu
+        const toggleButton = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        toggleButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+        });
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+            mobileMenu.classList.add('hidden'); // Hide menu after clicking a link
+        }
+    </script>
+</body>
+</html>
+
     <div id="mobile-menu-toggle" class="flex flex-col items-center justify-center h-full hidden">
         <nav class="bg-white rounded-lg p-4">
             <ul class="flex flex-col space-y-4">
