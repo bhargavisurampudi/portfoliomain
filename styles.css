@@ -474,15 +474,59 @@ p {
     display: block;
 }
 
+/* Mobile Styles */
 @media (max-width: 640px) {
-    #mobile-menu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        z-index: 10;
+    body {
+        padding: 0 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile img {
+        margin: 0 0 20px 0;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card, .skill-card {
+        margin: 10px 0;
+    }
+
+    .certification-content {
+        grid-template-columns: 1fr;
     }
 }
