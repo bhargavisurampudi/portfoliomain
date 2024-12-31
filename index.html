@@ -13,15 +13,7 @@
             <h1 class="text-2xl font-bold">John Doe</h1>
             <button id="mobile-toggle" class="p-2 bg-blue-500 text-white rounded">☰</button>
         </div>
-        <nav id="mobile-menu" class="hidden bg-white rounded-lg shadow-lg p-4 w-full">
-            <ul class="flex flex-col space-y-2">
-                <li><a href="#home" class="hover:text-blue-500" onclick="scrollToSection('home')">Home</a></li>
-                <li><a href="#about" class="hover:text-blue-500" onclick="scrollToSection('about')">About</a></li>
-                <li><a href="#education" class="hover:text-blue-500" onclick="scrollToSection('education')">Education</a></li>
-                <li><a href="#skills" class="hover:text-blue-500" onclick="scrollToSection('skills')">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-500" onclick="scrollToSection('projects')">Projects</a></li>
-            </ul>
-        </nav>
+       
     </header>
 
     <script>
@@ -43,6 +35,17 @@
 </body>
 </body>
 </html>
+    <div id="mobile-menu-toggle" class="flex flex-col items-center justify-center h-full hidden">
+        <nav class="bg-white rounded-lg p-4">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#home" class="hover:text-blue-500" onclick="scrollToSection('home')">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-500" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#education" class="hover:text-blue-500" onclick="scrollToSection('education')">Education</a></li>
+                <li><a href="#skills" class="hover:text-blue-500" onclick="scrollToSection('skills')">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-500" onclick="scrollToSection('projects')">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <section id="home" class="hero flex flex-col items-center py-20">
             <div class="profile flex items-center">
