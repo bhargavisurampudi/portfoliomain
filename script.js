@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Mobile menu toggle functionality
 const mobileToggle = document.getElementById('mobile-toggle');
-const mobileMenu = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
 mobileToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
