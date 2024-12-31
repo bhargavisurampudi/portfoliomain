@@ -11,18 +11,31 @@
     <header class="bg-white shadow">
         <div class="container mx-auto p-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">John Doe</h1>
-            <nav>
+            <button id="mobile-toggle" class="md:hidden p-2 bg-blue-500 text-white rounded">Menu</button>
+            <nav id="mobile-menu" class="hidden md:flex">
                 <ul class="flex space-x-4">
                     <li><a href="#home" class="hover:text-blue-500">Home</a></li>
                     <li><a href="#about" class="hover:text-blue-500">About</a></li>
                     <li><a href="#education" class="hover:text-blue-500">Education</a></li>
+                    <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
                     <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-                    <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
-                    <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div id="mobile-menu-toggle" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden">
+        <div class="flex flex-col items-center justify-center h-full">
+            <nav class="bg-white rounded-lg p-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#home" class="hover:text-blue-500" onclick="scrollToSection('home')">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-500" onclick="scrollToSection('about')">About</a></li>
+                    <li><a href="#education" class="hover:text-blue-500" onclick="scrollToSection('education')">Education</a></li>
+                    <li><a href="#skills" class="hover:text-blue-500" onclick="scrollToSection('skills')">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-blue-500" onclick="scrollToSection('projects')">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <main>
         <section id="home" class="hero flex flex-col items-center py-20">
             <div class="profile flex items-center">
