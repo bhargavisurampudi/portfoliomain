@@ -13,7 +13,7 @@
             <h1 class="text-2xl font-bold">John Doe</h1>
             <button id="mobile-toggle" class="p-2 bg-blue-500 text-white rounded">☰</button>
         </div>
-        <nav id="mobile-menu" class="hidden absolute right-0 top-full bg-white rounded-lg shadow-lg p-4 w-40">
+        <nav id="mobile-menu" class="hidden bg-white rounded-lg shadow-lg p-4 w-full">
             <ul class="flex flex-col space-y-2">
                 <li><a href="#home" class="hover:text-blue-500" onclick="scrollToSection('home')">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-500" onclick="scrollToSection('about')">About</a></li>
@@ -313,5 +313,21 @@
         <p>&copy; 2023 John Doe. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Toggle mobile menu
+        const toggleButton = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        toggleButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+        });
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+            mobileMenu.classList.add('hidden'); // Hide menu after clicking a link
+        }
+    </script>
 </body>
 </html>
