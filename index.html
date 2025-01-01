@@ -3,278 +3,639 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bhargavi Surampudi - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-white shadow">
-        <div class="container mx-auto p-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">John Doe</h1>
-            <button id="mobile-toggle" class="p-2 bg-blue-500 text-white rounded">☰</button>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00ff88" />
+                                <stop offset="100%" style="stop-color:#7000ff" />
+                            </linearGradient>
+                        </defs>
+                        <path class="logo-path" d="M10 25 L25 10 L40 25 L25 40 Z" fill="none" stroke="url(#logoGradient)" stroke-width="2" />
+                        <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="logo-text">BS</text>
+                    </svg>
+                    <span class="logo-name">Bhargavi Surampudi</span>
+                </div>
+            </div>
+            <div class="nav-container">
+                <button class="nav-toggle" id="nav-toggle">
+                    &#9776; <!-- Hamburger icon -->
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#home-certifications">Certifications</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#workshops-events">Workshops and Events</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
         </div>
-        <nav id="mobile-menu" class="hidden bg-white rounded-lg shadow-lg p-4 w-full">
-            <ul class="flex flex-col space-y-2">
-                <li><a href="#home" class="hover:text-blue-500" onclick="scrollToSection('home')">Home</a></li>
-                <li><a href="#about" class="hover:text-blue-500" onclick="scrollToSection('about')">About</a></li>
-                <li><a href="#education" class="hover:text-blue-500" onclick="scrollToSection('education')">Education</a></li>
-                <li><a href="#skills" class="hover:text-blue-500" onclick="scrollToSection('skills')">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-500" onclick="scrollToSection('projects')">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
 
-    <script>
-        // Toggle mobile menu
-        const toggleButton = document.getElementById('mobile-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="intro-container">
+                <h1 class="greeting">Hi, I'm</h1>
+                <div class="name-container">
+                    <span class="highlight-name">Bhargavi Surampudi</span>
+                </div>
+                <div class="roles-container">
+                    <div class="role">Full Stack Developer</div>
+                    <div class="role-separator">•</div>
+                    <div class="role">Data Scientist</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        toggleButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
-        });
+    <section id="education" class="education-section">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="education-grid">
+            <div class="education-card animated-card">
+                <h3><span class="gradient-text">Bachelor of Technology</span></h3>
+                <p>Swarnandhra College of Engineering and Technology</p>
+                <p><i class="fas fa-calendar-alt"></i> 2022 - 2026</p>
+                <p><i class="fas fa-map-marker-alt"></i> Seetharampuram</p>
+            </div>
+            <div class="education-card animated-card">
+                <h3><span class="gradient-text">Intermediate Education</span></h3>
+                <p>Aditya Junior College</p>
+                <p><i class="fas fa-calendar-alt"></i> 2020 - 2022</p>
+                <p><i class="fas fa-map-marker-alt"></i> Narsapur</p>
+            </div>
+            <div class="education-card animated-card">
+                <h3><span class="gradient-text">Secondary Education</span></h3>
+                <p>Aditya School</p>
+                <p><i class="fas fa-calendar-alt"></i> 2019 - 2020</p>
+                <p><i class="fas fa-map-marker-alt"></i> Narsapur</p>
+            </div>
+        </div>
+    </section>
 
-        // Smooth scroll function
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-            mobileMenu.classList.add('hidden'); // Hide menu after clicking a link
-        }
-    </script>
-</body>
-
-</html>
-    <div id="mobile-menu-toggle" class="flex flex-col items-center justify-center h-full hidden">
-        <nav class="bg-white rounded-lg p-4">
-            <ul class="flex flex-col space-y-4">
-                <li><a href="#home" class="hover:text-blue-500" onclick="scrollToSection('home')">Home</a></li>
-                <li><a href="#about" class="hover:text-blue-500" onclick="scrollToSection('about')">About</a></li>
-                <li><a href="#education" class="hover:text-blue-500" onclick="scrollToSection('education')">Education</a></li>
-                <li><a href="#skills" class="hover:text-blue-500" onclick="scrollToSection('skills')">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-500" onclick="scrollToSection('projects')">Projects</a></li>
-            </ul>
-        </nav>
-    </div>
-    <main>
-        <section id="home" class="hero flex flex-col items-center py-20">
-            <div class="profile flex items-center">
-                <img src="C:\Users\vivek\Documents\profile.jpg" alt="John Doe" class="rounded-full w-40 h-40 mr-8">
-                <div class="text">
-                    <h2 class="text-xl font-semibold">Hello, I'm <br></h2>
-                    <h3>John Doe</h3>
-                    <p class="text-gray-600">Frontend Developer</p>
-                    <div class="buttons mt-4 flex space-x-4">
-                        <a href="#" class="btn download-cv">Download CV</a>
-                        <a href="#contact" class="btn contact-info">Contact Info</a>
+    <section id="skills" class="skills-section">
+        <h2 class="section-title"><i class="fas fa-cogs"></i> Skills</h2>
+        <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="skill-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="skill-heading"><i class="fas fa-code"></i> Frontend</h3>
                     </div>
-                    <div class="socials flex justify-center mt-4">
-                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="relative text-gray-600 hover:text-blue-600 mx-2 group">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="LinkedIn" class="w-8 h-8">
-                            <span class="tooltip absolute left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/yourprofile" target="_blank" class="relative text-gray-600 hover:text-black mx-2 group">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" alt="GitHub" class="w-8 h-8">
-                            <span class="tooltip absolute left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">GitHub</span>
-                        </a>
+                    <div class="card-back">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> HTML5</li>
+                            <li><i class="fas fa-check-circle"></i> CSS3</li>
+                            <li><i class="fas fa-check-circle"></i> JavaScript</li>
+                            <li><i class="fas fa-check-circle"></i> React</li>
+                            <li><i class="fas fa-check-circle"></i> Bootstrap</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="about" class="p-4 bg-white rounded shadow mb-4">
-            <h2 class="text-2xl font-bold text-center">Get To Know More</h2>
-            <h3 class="text-xl font-semibold text-center mt-2">About Me</h3>
-            <div class="about-content flex justify-center items-start mt-6">
-                <img src="C:\Users\vivek\Pictures\about1.jpg" alt="John Doe" class="rounded-full w-40 h-40 mr-8">
-                <div class="about-details flex flex-col">
-                    <div class="highlighted-content">
-                        <p class="text-gray-600">
-                            As a <strong>Full Stack Developer</strong>, I have experience in both frontend and backend technologies, allowing me to build comprehensive web applications. Additionally, my background as a <strong>Data Scientist</strong> enables me to analyze data effectively and derive insights that drive decision-making.
+            <div class="skill-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="skill-heading"><i class="fas fa-server"></i> Backend</h3>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Node.js</li>
+                            <li><i class="fas fa-check-circle"></i> Django</li>
+                            <li><i class="fas fa-check-circle"></i> Rest APIs</li>
+                            <li><i class="fas fa-check-circle"></i> PostgreSQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="skill-heading"><i class="fas fa-code-branch"></i> Programming Languages</h3>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Java</li>
+                            <li><i class="fas fa-check-circle"></i> Python</li>
+                            <li><i class="fas fa-check-circle"></i> C</li>
+                            <li><i class="fas fa-check-circle"></i> SQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="skill-heading"><i class="fas fa-tools"></i> Tools & Techniques</h3>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Git</li>
+                            <li><i class="fas fa-check-circle"></i> Github</li>
+                            <li><i class="fas fa-check-circle"></i> VS Code</li>
+                            <li><i class="fas fa-check-circle"></i> Jupyter</li>
+                            <li><i class="fas fa-check-circle"></i> Tensor Flow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="skill-heading"><i class="fas fa-user-friends"></i> Soft Skills</h3>
+                    </div>
+                    <div class="card-back">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Teamwork</li>
+                            <li><i class="fas fa-check-circle"></i> Communication</li>
+                            <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                            <li><i class="fas fa-check-circle"></i> Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    
+    <section id="projects" class="section">
+        <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3><span class="gradient-text">Responsive Landing Page Navigation Task></span></h3>
+                <p>Created a fluid and interactive navigation menu using HTML, CSS, and JavaScript.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/responsivepage" target="_blank" class="view-button">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3><span class="gradient-text">Stock Market Prediction</span></h3>
+                <p>Developed a web-based Stock Market Prediction application using HTML, CSS, and JavaScript to analyze stock trends.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/codealpha_stock-market-prediction" target="_blank" class="view-button">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3><span class="gradient-text">Tic-Tac-Toe</span></h3>
+                <p>Developed a web-based Tic-Tac-Toe game using HTML, CSS, and JavaScript.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/tictactoe" target="_blank" class="view-button">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3><span class="gradient-text">Clone Portfolio</span></h3>
+                <p>Developed a web-based Clone Portfolio using HTML, CSS, and JavaScript to showcase projects and skills.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/portfoliomain" target="_blank" class="view-button">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h3><span class="gradient-text">Calculator</span></h3>
+                <p>Developed a web-based Calculator using HTML, CSS, and JavaScript to perform basic arithmetic operations.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/Codsoft" target="_blank" class="view-button">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h3><span class="gradient-text">Weather App</span></h3>
+                <p>Developed a web-based Weather App using HTML, CSS, and JavaScript to display real-time weather data.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi" target="_blank" class="view-button">View Project</a>
+            </div>
+
+
+            <div class="project-card">
+                <h3><span class="gradient-text">Stopwatch Web Application</span></h3>
+                <p>Built an interactive stopwatch application using HTML, CSS, and JavaScript.</p>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi" target="_blank" class="view-button">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3><span class="gradient-text">Sentimental Analysis Twitter</span></h3>
+                <p>Developed a tool to analyze sentiments from Twitter data using natural language processing techniques.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>Data Analysis</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/CODXO" target="_blank" class="view-button">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3><span class="gradient-text">Titanic Classification</span></h3>
+                <p>Implemented machine learning techniques to predict passenger survival based on various features.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>ML</span>
+                    <span>Data Analysis</span>
+                </div>
+                <a href="https://github.com/bhargavisurampudi/codealpha_titanic-classification" target="_blank" class="view-button">View Project</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="home-certifications" class="section">
+        <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+        
+        <div class="certification-card">
+            <h3 class="certification-title">NPTEL Online Certification</h3>
+            <p class="certification-awarded">This certificate is awarded to <strong>POCHIRAJU VIVEK SAI SRI KRISHNA</strong> for successfully completing the course:</p>
+            <h4 class="course-title">Python for Data Science</h4>
+            <p class="consolidated-score">With a consolidated score of <strong>66%</strong></p>
+            <p class="total-candidates">Total number of candidates certified in this course: <strong>11133</strong></p>
+            <p class="date">Jul-Aug 2024 (4 week course)</p>
+            <p class="certification-authority">Indian Institute of Technology Madras</p>
+        </div>
+
+        <div class="certification-card">
+            <h3 class="certification-title">Altair DataScience<br> 
+                Certificate of Virtual Internship</h3>
+            <p class="certification-awarded">This is to certify that <strong>VIVEK SAI SRI KRISHNA POCHIRAJU</strong></p>
+            <h4 class="course-title">Swarnandhra College of Engineering & Technology</h4>
+            <p class="internship-description">Has successfully completed <strong>10 weeks</strong> of</p>
+            <h4 class="course-title">Data Science Master Virtual Internship</h4>
+            <p class="internship-duration">During <strong>Oct - Dec 2024</strong></p>
+            <p class="supported-by">Supported By: <strong>ALT AIR</strong></p>
+            <p class="certification-id">Certificate ID: <strong>bef69b4ea60418746e22362717c73818</strong></p>
+            <p class="student-id">Student ID: <strong>STU659699920434c01704368416</strong></p>
+        </div>
+
+        <div class="certification-card">
+            <h3 class="certification-title">Power BI Certificate of Completion</h3>
+            <p class="certification-awarded">Proudly presented to <strong>POCHIRAJU VIVEK SAI SRI KRISHNA</strong></p>
+            <p class="workshop-description">For completing the <strong>2-Day Workshop</strong> on</p>
+            <h4 class="course-title">Business Intelligence using Power BI</h4>
+            <p class="conducted-by">Conducted By: <strong>Mr. Jatan Shah</strong></p>
+            <p class="certification-authority">Microsoft Certified Trainer, Co-founder & CEO, Skill Nation</p>
+            <p class="duration">Duration: <strong>8th & 9th June, 2024</strong></p>
+            <p class="website">Website: <strong><a href="https://www.skillnation.in" class="website-link">www.skillnation.in</a></strong></p>
+        </div>
+
+        <div class="certification-card">
+            <h3 class="certification-title"> CodXo Certification </h3>
+            <p class="certification-awarded">This certificate is proudly presented to <strong>POCHIRAJU VIVEK SAI SRI KRISHNA</strong> for successfully completing the internship in:</p>
+            <h4 class="course-title">Data Science</h4>
+            <p class="internship-duration"><span class="duration">From: <strong>01-May-2024</strong> to <strong>30-Jun-2024</strong></span></p>
+            <p class="internship-description">During his internship, he efficiently completed <strong>intermediate-level tasks</strong>, and we found the student to be dedicated and hardworking.</p>
+            <p class="certification-id">Certificate ID: <strong>CX24JL144</strong></p>
+            <p class="date"><span class="duration">Date: <strong>9/24/2024</strong></span></p>
+            <p class="certification-authority">CodXo</p>
+        </div>
+
+        <div class="certification-card">
+            <h3 class="certification-title">Certificate of Internship (Pantech.AI)</h3>
+            <p class="certification-awarded">This certificate is proudly presented to <strong>POCHIRAJU VIVEK SAI SRI KRISHNA</strong> for successfully completing:</p>
+            <h4 class="course-title">3 Months Internship on Full Stack Web Development</h4>
+            <p class="internship-duration"><span class="duration">From: <strong>Jun 17, 2024</strong> to <strong>Sep 17, 2024</strong></span></p>
+            <p class="certification-authority">M.K. Jeevarajan, Founder & CEO</p>
+            <p class="website">Website: <strong><a href="https://www.pantech.ai" class="website-link">www.pantech.ai</a></strong></p>
+            <p class="certification-id">Certificate No: <strong>WW_3FSWD_OL_1807</strong></p>
+        </div>
+
+        <div class="certification-card">
+            <h3 class="certification-title">Teachnook Course Completion</h3>
+            <p class="certification-awarded">Presented to <strong>POCHIRAJU VIVEK SAI SRI KRISHNA</strong> for successfully completing:</p>
+            <h4 class="course-title">A course in Artificial Intelligence</h4>
+            <p class="collaboration">With <strong>Teachnook</strong> in collaboration with <strong>Cognizance'24 IIT Roorkee</strong>.</p>
+            <p class="internship-description"><span class="duration">During <strong>Oct - Dec 2024</strong></span></p>
+            <p class="certification-id">Certificate ID: <strong>TNCC2404-04737</strong></p>
+        </div>
+            <!-- Add more certifications as needed -->
+        </div>
+    </section>
+
+
+    <section id="experience" class="section">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-title">Teachnook - Artificial Intelligence</h3>
+                    <span class="role">Intern</span>
+                </div>
+                <div class="experience-timeline">
+                    <i class="fas fa-calendar"></i>
+                    <span class="duration">05/2024 - 06/2024</span>
+                </div>
+                <div class="experience-content">
+                    <p>Worked on projects in artificial intelligence and machine learning, focusing on:</p>
+                    <ul class="experience-points">
+                        <li><i class="fas fa-check-circle"></i> Model Development</li>
+                        <li><i class="fas fa-check-circle"></i> Data Preprocessing</li>
+                        <li><i class="fas fa-check-circle"></i> NLP Implementation</li>
+                        <li><i class="fas fa-check-circle"></i> Image Classification</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-title">Pantech Prolabs - Internship</h3>
+                    <span class="role">Intern</span>
+                </div>
+                <div class="experience-timeline">
+                    <i class="fas fa-calendar"></i>
+                    <span class="duration">06/17/2024 - 09/17/2024</span>
+                </div>
+                <div class="experience-content">
+                    <p>Selected for an internship position focusing on:</p>
+                    <ul class="experience-points">
+                        <li><i class="fas fa-check-circle"></i> Hands-on experience in projects</li>
+                        <li><i class="fas fa-check-circle"></i> Collaboration with development team</li>
+                        <li><i class="fas fa-check-circle"></i> Skill development in AI and ML</li>
+                        <li><i class="fas fa-check-circle"></i> Contributing to meaningful projects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-title">Trigovex - Front End Web Development</h3>
+                    <span class="role">Intern</span>
+                </div>
+                <div class="experience-timeline">
+                    <i class="fas fa-calendar"></i>
+                    <span class="duration">04/2023 - 06/2023</span>
+                </div>
+                <div class="experience-content">
+                    <p>Specialized in creating responsive and interactive web applications:</p>
+                    <ul class="experience-points">
+                        <li><i class="fas fa-check-circle"></i>Build a Portfolio</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive Web Development</li>
+                        <li><i class="fas fa-check-circle"></i> Interactive Features</li>
+                        <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+           <div class="experience-card">
+    <div class="experience-header">
+        <h3 class="experience-title">AWS Academy - Cloud Virtual Internship</h3>
+        <span class="role">Intern</span>
+    </div>
+    <div class="experience-timeline">
+        <i class="fas fa-calendar"></i>
+        <span class="duration">04/2024 - 06/2024</span>
+    </div>
+    <div class="experience-content">
+        <p>Completed a 10-week virtual internship focusing on:</p>
+        <ul class="experience-points">
+            <li><i class="fas fa-check-circle"></i> Cloud computing fundamentals</li>
+            <li><i class="fas fa-check-circle"></i> Hands-on experience with AWS services</li>
+            <li><i class="fas fa-check-circle"></i> Project-based learning in cloud technologies</li>
+            <li><i class="fas fa-check-circle"></i> Collaboration with peers on cloud projects</li>
+        </ul>
+    </div>
+</div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-title">Prodigy InfoTech - Generative AI Intern</h3>
+                    <span class="role">Intern</span>
+                </div>
+                <div class="experience-timeline">
+                    <i class="fas fa-calendar"></i>
+                    <span class="duration">07/15/2024 - 08/15/2024</span>
+                </div>
+                <div class="experience-content">
+                    <p>Selected for a Generative AI internship focusing on:</p>
+                    <ul class="experience-points">
+                        <li><i class="fas fa-check-circle"></i> Hands-on experience in AI projects</li>
+                        <li><i class="fas fa-check-circle"></i> Learning new skills in generative models</li>
+                        <li><i class="fas fa-check-circle"></i> Application of concepts through practical tasks</li>
+                        <li><i class="fas fa-check-circle"></i> Collaboration with the AI development team</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-title">CodeAlpha - Data Science Internship</h3>
+                    <span class="role">Intern</span>
+                </div>
+                <div class="experience-timeline">
+                    <i class="fas fa-calendar"></i>
+                    <span class="duration">08/15/2024 - 09/15/2024</span>
+                </div>
+                <div class="experience-content">
+                    <p>Selected for a Data Science internship focusing on:</p>
+                    <ul class="experience-points">
+                        <li><i class="fas fa-check-circle"></i> Hands-on experience with data analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Learning new skills in machine learning</li>
+                        <li><i class="fas fa-check-circle"></i> Application of concepts through projects</li>
+                        <li><i class="fas fa-check-circle"></i> Collaboration with the development team</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="workshops-events" class="section">
+        <h2 class="section-title">Workshops and Events</h2>
+
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-title">Excel Workshop</h3>
+                    <span class="role">Participant</span>
+                </div>
+                <div class="experience-timeline">
+                    <i class="fas fa-calendar"></i>
+                    <span class="duration">June 17, 2024</span>
+                </div>
+                <div class="experience-content">
+                    <p>Conducted by: OfficeMaster</p>
+                    <p>Description: A workshop focusing on advanced Excel techniques and data analysis.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+            <div class="experience-header">
+                <h3 class="experience-title">IET Ignite - Transit Techies</h3>
+                <span class="role">Participant</span>
+            </div>
+            <div class="experience-timeline">
+                <i class="fas fa-calendar"></i>
+                <span class="duration">Dec 14,2024</span>
+            </div>
+            <div class="experience-content">
+                <p>Conducted by: IET Bengaluru & Hyderabad Network</p>
+                <p>Description: Participated in Round 2 of the IET Ignite event in collaboration with Arcadis Consulting India Pvt Ltd.</p>
+            </div>
+        </div>
+          
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3 class="experience-title">IoT Workshop - Modernizing Agriculture</h3>
+                <span class="role">Participant</span>
+            </div>
+            <div class="experience-timeline">
+                <i class="fas fa-calendar"></i>
+                <span class="duration">December 27, 2024</span>
+            </div>
+            <div class="experience-content">
+                <p>Conducted by: Dr.Rajavel Ramadoss</p>
+                <p>Description: Participated in a workshop focusing on the role of IoT in modernizing agriculture.</p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3 class="experience-title">IoT Workshop - PicoW Connectivity</h3>
+                <span class="role">Participant</span>
+            </div>
+            <div class="experience-timeline">
+                <i class="fas fa-calendar"></i>
+                <span class="duration">December 28, 2024</span>
+            </div>
+            <div class="experience-content">
+                <p>Conducted by: Dr.Rajavel Ramadoss</p>
+                <p>Description: Participated in a workshop on wireless connectivity for PicoW (Client-Server Communication).</p>
+            </div>
+        </div>
+    
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3 class="experience-title">Master SQL Fundamentals</h3>
+                <span class="role">Participant</span>
+            </div>
+            <div class="experience-timeline">
+                <i class="fas fa-calendar"></i>
+                <span class="duration">September 9, 2024</span>
+            </div>
+            <div class="experience-content">
+                <p>Conducted by: Tushar Jha</p>
+                <p>Analytics Lead at Amazon (Ex-Airbnb, Ex-Paytm)</p>
+                <p>Description: Participated in a  masterclass focusing on SQL fundamentals</p>
+            </div>
+        </div>
+
+
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3 class="experience-title">Freedom with AI Masterclass</h3>
+                <span class="role">Participant</span>
+            </div>
+            <div class="experience-timeline">
+                <i class="fas fa-calendar"></i>
+                <span class="duration">May 19,2024</span>
+            </div>
+            <div class="experience-content">
+                <p>Conducted by: Freedom with AI</p>
+                <p>Description: Successfully completed the masterclass focusing on AI concepts and applications.</p>
+            </div>
+        </div>
+            <!-- Add more workshops/events as needed -->
+        </div>
+    </section>
+
+
+    <section id="contact" class="section">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-section">
+                <h2 class="section-title"><i class="fas fa-paper-plane"></i> Contact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <div class="email-box">
+                            <a href="mailto:bhargavisurampudi1@gmail.com" class="contact-link">
+                            bhargavisurampudi1@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <a href="tel:8328539393" class="contact-link">
+                            +91 8328539393
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/bhargavi-surampudi-02273b216/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BL%2FnB9u9JRc6t4PqmtrQy1g%3D%3D" target="_blank" class="contact-link">
+                           Surampudi Bhargavi
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub Profile</h3>
+                        <p class="contact-text">
+                            <a href="https://github.com/bhargavisurampudi" target="_blank">Bhargavi Surampudi</a>
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="education" class="p-4 bg-white rounded shadow mb-4">
-            <h2 class="text-2xl font-bold text-center">
-                <i class="fas fa-graduation-cap"></i> Education
-            </h2>
-            <div class="education-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-                <div class="education-box">
-                    <h3 class="font-bold"><i class="fas fa-user-graduate"></i> Bachelor of Technology</h3>
-                    <p>Swarnandhra College of Engineering & Technology</p>
-                    <p>Computer Science Engineering</p>
-                </div>
-                <div class="education-box">
-                    <h3 class="font-bold"><i class="fas fa-user-graduate"></i> Intermediate</h3>
-                    <p>Aditya Junior College</p>
-                    <p>MPC</p>
-                </div>
-                <div class="education-box">
-                    <h3 class="font-bold"><i class="fas fa-user-graduate"></i> SSC</h3>
-                    <p>Aditya School</p>
-                    <p>Narsapur</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="skills" class="skills-section">
-            <h2 class="section-title">
-                <i class="fas fa-cogs"></i> Skills
-            </h2>
-            <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="skill-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3 class="skill-heading"><i class="fas fa-code"></i> Frontend</h3>
-                        </div>
-                        <div class="card-back">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> HTML5</li>
-                                <li><i class="fas fa-check-circle"></i> CSS3</li>
-                                <li><i class="fas fa-check-circle"></i> JavaScript</li>
-                                <li><i class="fas fa-check-circle"></i> React</li>
-                                <li><i class="fas fa-check-circle"></i> Bootstrap</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3 class="skill-heading"><i class="fas fa-server"></i> Backend</h3>
-                        </div>
-                        <div class="card-back">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Node.js</li>
-                                <li><i class="fas fa-check-circle"></i> Django</li>
-                                <li><i class="fas fa-check-circle"></i> Rest APIs</li>
-                                <li><i class="fas fa-check-circle"></i> PostgreSQL</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3 class="skill-heading"><i class="fas fa-code-branch"></i> Programming Languages</h3>
-                        </div>
-                        <div class="card-back">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Java</li>
-                                <li><i class="fas fa-check-circle"></i> Python</li>
-                                <li><i class="fas fa-check-circle"></i> C</li>
-                                <li><i class="fas fa-check-circle"></i> SQL</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3 class="skill-heading"><i class="fas fa-tools"></i> Tools & Techniques</h3>
-                        </div>
-                        <div class="card-back">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Git</li>
-                                <li><i class="fas fa-check-circle"></i> Github</li>
-                                <li><i class="fas fa-check-circle"></i> VS Code</li>
-                                <li><i class="fas fa-check-circle"></i> Jupyter</li>
-                                <li><i class="fas fa-check-circle"></i> Tensor Flow</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3 class="skill-heading"><i class="fas fa-user-friends"></i> Soft Skills</h3>
-                        </div>
-                        <div class="card-back">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Teamwork</li>
-                                <li><i class="fas fa-check-circle"></i> Communication</li>
-                                <li><i class="fas fa-check-circle"></i> Problem Solving</li>
-                                <li><i class="fas fa-check-circle"></i> Project Management</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> 
-    
-      
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Browse My Recent Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.DR_oUgY_5d0LlUmCn2O9lAHaD4&pid=Api&P=0&h=180" alt="Stock Market Prediction" class="project-image">
-                    <h3 class="project-title">Stock Market Prediction</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/stockmarket-prediction" class="project-link">GitHub</a>
-                        <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-               
-                <div class="project-card">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.ypF0IiE-KLckwSzgVpKrjgHaE7&pid=Api&P=0&h=180" alt="Tic Tac Toe" class="project-image">
-                    <h3 class="project-title">Tic Tac Toe</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/tictactoe" class="project-link">GitHub</a>
-                        <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                <img src="https://tse3.mm.bing.net/th?id=OIP.APiJq2pa3eaBcm3i7onj9QHaFj&pid=Api&P=0&h=180" alt="Tic Tac Toe" class="project-image">
-                <h3 class="project-title">Weather App</h3>
-                <div class="project-links">
-                    <a href="https://tse3.mm.bing.net/th?id=OIP.APiJq2pa3eaBcm3i7onj9QHaFj&pid=Api&P=0&h=180" class="project-link">GitHub</a>
-                    <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
-                </div>
+            <div class="footer-gradient-line"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bhargavi Surampudi. All rights reserved.</p>
             </div>
-
-                <div class="project-card">
-                    <img src="https://tse2.mm.bing.net/th?id=OIP.QgJJ3E-wS0eaNAZoNmNqfQHaEO&pid=Api&P=0&h=180 alt="Portfolio Clone" class="project-image">
-                    <h3 class="project-title">Responsive Page</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/portfolio-clone" class="project-link">GitHub</a>
-                        <a href="https://yourliveprojectlink.com" class="project-link">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-
-        <section id="experience" class="p-4 bg-white rounded shadow mb-4">
-            <h2 class="text-2xl font-bold">Experience</h2>
-            <p>Details about your work experience.</p>
-        </section>
-
-        <section id="contact" class="p-4 bg-white rounded shadow mb-4">
-            <h2 class="text-2xl font-bold">Contact</h2>
-            <p>Contact information.</p>
-        </section>
-       
-    </main>
-    <footer class="text-center p-4 bg-white">
-        <p>&copy; 2023 John Doe. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
-    <script>
-        // Toggle mobile menu
-        const toggleButton = document.getElementById('mobile-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+</section>
 
-        toggleButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize any remaining functionality
         });
 
-        // Smooth scroll function
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-            mobileMenu.classList.add('hidden'); // Hide menu after clicking a link
-        }
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Toggle the active class
+        });
     </script>
 </body>
 </html>
